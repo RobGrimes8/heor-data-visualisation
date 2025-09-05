@@ -8,53 +8,38 @@ import "@/lib/chartSetup";
 export default function BarChart({ dataset }) {
     if (dataset.length === 0) return <p>Dataset not passed to component</p>;
 
-    const sorted = [...dataset].sort(
-        (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
-    );
+    const [startDate, setStartDate] = useState(dataset[0].date);
+    const [endDate, setEndDate] = useState(dataset[dataset.length - 1].date);
+    const [filteredData, setFilteredData] = useState(dataset);
 
-    const [startDate, setStartDate] = useState(sorted[0].date);
-    const [endDate, setEndDate] = useState(sorted[sorted.length - 1].date);
-
-    const labels = dataset.map((d) => d.date);
-    const dataValues = dataset.map((d) => d.productivity_score);
-    const hoursWorkedValues = dataset.map((d) => d.hours_worked);
-    const breakMinutesValues = dataset.map((d) => d.break_minutes);
-    const focuLevelValues = dataset.map((d) => d.focus_level);
+    const labels = filteredData.map((d) => d.date);
+    const hoursWorkedValues = filteredData.map((d) => d.hours_worked);
+    const breakValues = filteredData.map((d) => d.break_minutes / 60);
+    const focuLevelValues = filteredData.map((d) => d.focus_level);
 
     const data = {
         labels,
         datasets: [
             {
-                label: "Productivity Score",
-                data: dataValues,
-                borderColor: "rgba(54, 162, 235, 1)",
-                backgroundColor: "rgba(54, 162, 235, 0.2)",
-                tension: 0.2,
-                fill: true,
-            },
-            {
                 label: "Hours Worked",
                 data: hoursWorkedValues,
-                borderColor: "rgba(99, 255, 161, 1)",
+                borderWidth: 1,
+                borderColor: "rgba(99, 255, 161, 0.5)",
                 backgroundColor: "rgba(99, 255, 161, 0.2)",
-                tension: 0.2,
-                fill: true,
             },
             {
-                label: "Break Minutes",
-                data: breakMinutesValues,
-                borderColor: "rgba(255, 99, 132, 1)",
+                label: "Break Time (hrs)",
+                data: breakValues,
+                borderWidth: 1,
+                borderColor: "rgba(255, 99, 132, 0.5)",
                 backgroundColor: "rgba(255, 99, 132, 0.2)",
-                tension: 0.2,
-                fill: true,
             },
             {
                 label: "Focus Level",
                 data: focuLevelValues,
-                borderColor: "rgba(172, 99, 255, 1)",
+                borderWidth: 1,
+                borderColor: "rgba(172, 99, 255, 0.5)",
                 backgroundColor: "rgba(172, 99, 255, 0.2)",
-                tension: 0.2,
-                fill: true,
             },
         ],
     };
@@ -69,15 +54,25 @@ export default function BarChart({ dataset }) {
 
     const handleStartDateChange = (e) => {
         setStartDate(e.target.value);
+        const newData = [...filteredData];
+        const newFiltered = newData.filter(
+            (d) => d.date >= e.target.value && d.date <= endDate
+        );
+        setFilteredData(newFiltered);
     };
     const handleEndDateChange = (e) => {
         setEndDate(e.target.value);
+        const newData = [...filteredData];
+        const newFiltered = newData.filter(
+            (d) => d.date >= startDate && d.date <= e.target.value
+        );
+        setFilteredData(newFiltered);
     };
 
     return (
         <div className={styles.chartContainer}>
-            <div>
-                <div className="date-input-container">
+            <div className={styles.date_inputs}>
+                <div className={styles.date_input_container}>
                     <label htmlFor="start_date">Start date:</label>
                     <input
                         type="date"
@@ -85,11 +80,11 @@ export default function BarChart({ dataset }) {
                         id="start_date"
                         value={startDate}
                         onChange={handleStartDateChange}
-                        min={startDate}
+                        min={filteredData[0].date}
                         max={endDate}
                     />
                 </div>
-                <div className="date-input-container">
+                <div className={styles.date_input_container}>
                     <label htmlFor="end_date">End date:</label>
                     <input
                         type="date"
@@ -98,7 +93,7 @@ export default function BarChart({ dataset }) {
                         value={endDate}
                         onChange={handleEndDateChange}
                         min={startDate}
-                        max={endDate}
+                        max={filteredData[filteredData.length - 1].date}
                     />
                 </div>
             </div>
