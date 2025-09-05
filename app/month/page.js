@@ -1,5 +1,22 @@
 import styles from "./styles.module.scss";
+import LineChart from "../components/LineChart/LineChart";
+import { getDataset } from "@/lib/getDataset";
 
 export default function MonthPage() {
-    return <div className={styles.page}>Month Page</div>;
+    const dataset = getDataset();
+
+    return (
+        <div className={styles.page}>
+            <main className={styles.main}>
+                <div className={styles.intro}>
+                    <h1>Monthly Productivity Overview</h1>
+                    <p>
+                        This chart shows your productivity score across the past
+                        30 days.
+                    </p>
+                </div>
+                <LineChart dataset={dataset} />
+            </main>
+        </div>
+    );
 }

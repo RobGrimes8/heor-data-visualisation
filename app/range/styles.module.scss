@@ -1,3 +1,21 @@
 .page {
     margin-top: 60px;
+    .main {
+        padding: 2rem 3rem;
+        p {
+            margin-bottom: 1rem;
+            max-width: 650px;
+            color: #4a5565;
+            &.tip {
+                font-size: 14px;
+            }
+        }
+        .intro {
+            margin-bottom: 2rem;
+            h1 {
+                margin-bottom: 1rem;
+                font-size: 1.7rem;
+            }
+        }
+    }
 }
