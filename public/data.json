@@ -1,212 +1,212 @@
 [
     {
-        "date": "2025-08-01",
-        "hours_worked": 8,
+        "date": "2025-07-01",
+        "hours_worked": 7.5,
         "break_minutes": 45,
-        "focus_level": 7,
-        "productivity_score": 117.5
+        "focus_level": 8,
+        "productivity_score": 82
     },
     {
-        "date": "2025-08-02",
+        "date": "2025-07-02",
         "hours_worked": 6,
-        "break_minutes": 30,
-        "focus_level": 5,
-        "productivity_score": 85.0
-    },
-    {
-        "date": "2025-08-03",
-        "hours_worked": 7,
         "break_minutes": 60,
         "focus_level": 6,
-        "productivity_score": 100.0
+        "productivity_score": 68
     },
     {
-        "date": "2025-08-04",
-        "hours_worked": 9,
-        "break_minutes": 40,
-        "focus_level": 8,
-        "productivity_score": 137.0
-    },
-    {
-        "date": "2025-08-05",
+        "date": "2025-07-03",
         "hours_worked": 8,
-        "break_minutes": 50,
-        "focus_level": 7,
-        "productivity_score": 115.0
+        "break_minutes": 30,
+        "focus_level": 9,
+        "productivity_score": 90
     },
     {
-        "date": "2025-08-06",
-        "hours_worked": 5,
-        "break_minutes": 20,
-        "focus_level": 4,
-        "productivity_score": 73.0
+        "date": "2025-07-04",
+        "hours_worked": 5.5,
+        "break_minutes": 70,
+        "focus_level": 5,
+        "productivity_score": 60
     },
     {
-        "date": "2025-08-07",
+        "date": "2025-07-05",
         "hours_worked": 7,
-        "break_minutes": 35,
-        "focus_level": 6,
-        "productivity_score": 103.5
+        "break_minutes": 40,
+        "focus_level": 7,
+        "productivity_score": 78
     },
     {
-        "date": "2025-08-08",
+        "date": "2025-07-06",
+        "hours_worked": 6.5,
+        "break_minutes": 50,
+        "focus_level": 6,
+        "productivity_score": 70
+    },
+    {
+        "date": "2025-07-07",
         "hours_worked": 8,
+        "break_minutes": 35,
+        "focus_level": 8,
+        "productivity_score": 85
+    },
+    {
+        "date": "2025-07-08",
+        "hours_worked": 7,
+        "break_minutes": 45,
+        "focus_level": 7,
+        "productivity_score": 80
+    },
+    {
+        "date": "2025-07-09",
+        "hours_worked": 6,
         "break_minutes": 60,
-        "focus_level": 7,
-        "productivity_score": 112.0
-    },
-    {
-        "date": "2025-08-09",
-        "hours_worked": 6,
-        "break_minutes": 45,
-        "focus_level": 5,
-        "productivity_score": 82.5
-    },
-    {
-        "date": "2025-08-10",
-        "hours_worked": 7,
-        "break_minutes": 30,
         "focus_level": 6,
-        "productivity_score": 105.0
+        "productivity_score": 68
     },
     {
-        "date": "2025-08-11",
-        "hours_worked": 9,
-        "break_minutes": 50,
-        "focus_level": 8,
-        "productivity_score": 134.0
-    },
-    {
-        "date": "2025-08-12",
-        "hours_worked": 8,
+        "date": "2025-07-10",
+        "hours_worked": 7.5,
         "break_minutes": 40,
-        "focus_level": 7,
-        "productivity_score": 118.0
+        "focus_level": 8,
+        "productivity_score": 83
     },
     {
-        "date": "2025-08-13",
-        "hours_worked": 6,
-        "break_minutes": 25,
-        "focus_level": 5,
-        "productivity_score": 86.5
+        "date": "2025-07-11",
+        "hours_worked": 5,
+        "break_minutes": 75,
+        "focus_level": 4,
+        "productivity_score": 55
     },
     {
-        "date": "2025-08-14",
-        "hours_worked": 7,
-        "break_minutes": 55,
+        "date": "2025-07-12",
+        "hours_worked": 6.5,
+        "break_minutes": 50,
         "focus_level": 6,
-        "productivity_score": 97.5
+        "productivity_score": 70
     },
     {
-        "date": "2025-08-15",
-        "hours_worked": 8,
-        "break_minutes": 35,
+        "date": "2025-07-13",
+        "hours_worked": 7,
+        "break_minutes": 45,
         "focus_level": 7,
-        "productivity_score": 121.5
+        "productivity_score": 78
     },
     {
-        "date": "2025-08-16",
-        "hours_worked": 9,
+        "date": "2025-07-14",
+        "hours_worked": 8,
+        "break_minutes": 30,
+        "focus_level": 9,
+        "productivity_score": 92
+    },
+    {
+        "date": "2025-07-15",
+        "hours_worked": 6,
         "break_minutes": 60,
-        "focus_level": 8,
-        "productivity_score": 131.0
-    },
-    {
-        "date": "2025-08-17",
-        "hours_worked": 5,
-        "break_minutes": 30,
-        "focus_level": 4,
-        "productivity_score": 70.0
-    },
-    {
-        "date": "2025-08-18",
-        "hours_worked": 7,
-        "break_minutes": 40,
         "focus_level": 6,
-        "productivity_score": 101.0
+        "productivity_score": 68
     },
     {
-        "date": "2025-08-19",
-        "hours_worked": 8,
-        "break_minutes": 50,
-        "focus_level": 7,
-        "productivity_score": 115.0
+        "date": "2025-07-16",
+        "hours_worked": 7.5,
+        "break_minutes": 40,
+        "focus_level": 8,
+        "productivity_score": 84
     },
     {
-        "date": "2025-08-20",
-        "hours_worked": 6,
-        "break_minutes": 45,
+        "date": "2025-07-17",
+        "hours_worked": 5.5,
+        "break_minutes": 70,
         "focus_level": 5,
-        "productivity_score": 82.5
+        "productivity_score": 62
     },
     {
-        "date": "2025-08-21",
-        "hours_worked": 7,
-        "break_minutes": 30,
+        "date": "2025-07-18",
+        "hours_worked": 6.5,
+        "break_minutes": 50,
         "focus_level": 6,
-        "productivity_score": 105.0
+        "productivity_score": 72
     },
     {
-        "date": "2025-08-22",
-        "hours_worked": 9,
-        "break_minutes": 40,
-        "focus_level": 8,
-        "productivity_score": 137.0
-    },
-    {
-        "date": "2025-08-23",
-        "hours_worked": 8,
-        "break_minutes": 55,
-        "focus_level": 7,
-        "productivity_score": 113.5
-    },
-    {
-        "date": "2025-08-24",
-        "hours_worked": 5,
-        "break_minutes": 20,
-        "focus_level": 4,
-        "productivity_score": 73.0
-    },
-    {
-        "date": "2025-08-25",
+        "date": "2025-07-19",
         "hours_worked": 7,
         "break_minutes": 45,
-        "focus_level": 6,
-        "productivity_score": 99.5
-    },
-    {
-        "date": "2025-08-26",
-        "hours_worked": 8,
-        "break_minutes": 35,
         "focus_level": 7,
-        "productivity_score": 121.5
+        "productivity_score": 79
     },
     {
-        "date": "2025-08-27",
-        "hours_worked": 9,
-        "break_minutes": 50,
-        "focus_level": 8,
-        "productivity_score": 134.0
+        "date": "2025-07-20",
+        "hours_worked": 8,
+        "break_minutes": 30,
+        "focus_level": 9,
+        "productivity_score": 91
     },
     {
-        "date": "2025-08-28",
+        "date": "2025-07-21",
         "hours_worked": 6,
-        "break_minutes": 25,
-        "focus_level": 5,
-        "productivity_score": 86.5
-    },
-    {
-        "date": "2025-08-29",
-        "hours_worked": 7,
-        "break_minutes": 55,
+        "break_minutes": 60,
         "focus_level": 6,
-        "productivity_score": 97.5
+        "productivity_score": 67
     },
     {
-        "date": "2025-08-30",
-        "hours_worked": 8,
+        "date": "2025-07-22",
+        "hours_worked": 7.5,
         "break_minutes": 40,
+        "focus_level": 8,
+        "productivity_score": 85
+    },
+    {
+        "date": "2025-07-23",
+        "hours_worked": 5,
+        "break_minutes": 75,
+        "focus_level": 4,
+        "productivity_score": 54
+    },
+    {
+        "date": "2025-07-24",
+        "hours_worked": 6.5,
+        "break_minutes": 50,
+        "focus_level": 6,
+        "productivity_score": 71
+    },
+    {
+        "date": "2025-07-25",
+        "hours_worked": 7,
+        "break_minutes": 45,
         "focus_level": 7,
-        "productivity_score": 118.0
+        "productivity_score": 77
+    },
+    {
+        "date": "2025-07-26",
+        "hours_worked": 8,
+        "break_minutes": 30,
+        "focus_level": 9,
+        "productivity_score": 93
+    },
+    {
+        "date": "2025-07-27",
+        "hours_worked": 6,
+        "break_minutes": 60,
+        "focus_level": 6,
+        "productivity_score": 66
+    },
+    {
+        "date": "2025-07-28",
+        "hours_worked": 7.5,
+        "break_minutes": 40,
+        "focus_level": 8,
+        "productivity_score": 86
+    },
+    {
+        "date": "2025-07-29",
+        "hours_worked": 5.5,
+        "break_minutes": 70,
+        "focus_level": 5,
+        "productivity_score": 61
+    },
+    {
+        "date": "2025-07-30",
+        "hours_worked": 6.5,
+        "break_minutes": 50,
+        "focus_level": 6,
+        "productivity_score": 73
     }
 ]
