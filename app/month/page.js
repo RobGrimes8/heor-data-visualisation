@@ -14,6 +14,9 @@ export default function MonthPage() {
                         This chart shows your productivity score across the past
                         30 days.
                     </p>
+                    <p className={styles.tip}>
+                        Click a data point to adjust it's values.
+                    </p>
                 </div>
                 <LineChart dataset={dataset} />
             </main>
