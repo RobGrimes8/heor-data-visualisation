@@ -1,7 +1,10 @@
 .page {
     margin-top: 60px;
     .main {
-        padding: 2rem 3rem;
+        padding: 2rem 1rem;
+        @media (min-width: 768px) {
+            padding: 2rem 3rem;
+        }
         p {
             margin-bottom: 1rem;
             max-width: 650px;

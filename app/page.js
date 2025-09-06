@@ -1,12 +1,13 @@
 import Link from "next/link";
 import styles from "./page.module.scss";
+import { LuChartLine, LuChartColumnBig } from "react-icons/lu";
 
 export default function Home() {
     return (
         <div className={styles.page}>
             <main className={styles.main}>
                 <div className={styles.intro}>
-                    <h1>Welcome to the Productivity Dashboard</h1>
+                    <h1>Welcome to your Productivity Dashboard</h1>
                     <p>
                         This Progressive Web App helps you explore daily
                         productivity metrics over time. View trends across a
@@ -21,13 +22,15 @@ export default function Home() {
                 </div>
                 <div className={styles.quicklinks}>
                     <Link href="/month" className={styles.link}>
+                        <LuChartLine />
                         <h2>Month View</h2>
                         <p>
                             See a line chart showing productivity scores across
                             the full month.
                         </p>
                     </Link>
-                    <Link href="/month" className={styles.link}>
+                    <Link href="/range" className={styles.link}>
+                        <LuChartColumnBig />
                         <h2>Range View</h2>
                         <p>
                             Select a custom date range and compare detailed

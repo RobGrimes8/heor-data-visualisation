@@ -1,5 +1,11 @@
+.scrollable_container {
+    overflow-x: auto;
+    width: 100%;
+}
+
 .chartContainer {
     width: 100%;
+    min-width: 600px;
     max-width: 1200px;
     margin: 0 auto 3rem;
     padding: 1.5rem;

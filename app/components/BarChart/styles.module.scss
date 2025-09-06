@@ -31,4 +31,13 @@
             }
         }
     }
+    .scrollable_outer {
+        overflow-x: auto;
+        width: 100%;
+        .scrollable_inner {
+            width: 100%;
+            // min-width: 600px;
+            // max-width: 1200px;
+        }
+    }
 }

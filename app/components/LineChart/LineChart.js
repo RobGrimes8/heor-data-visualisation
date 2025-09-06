@@ -40,8 +40,12 @@ export default function LineChartFromJSON({ dataset }) {
     const options = {
         responsive: true,
         plugins: {
-            legend: { position: "top" },
-            title: { display: true, text: "Monthly Productivity Overview" },
+            legend: { align: "start", position: "top" },
+            title: {
+                align: "start",
+                display: true,
+                text: "Monthly Productivity Overview",
+            },
         },
         onClick: (event, elements, chart) => {
             if (elements.length > 0) {
@@ -54,8 +58,10 @@ export default function LineChartFromJSON({ dataset }) {
 
     return (
         <>
-            <div className={styles.chartContainer}>
-                <Line ref={chartRef} data={data} options={options} />
+            <div className={styles.scrollable_container}>
+                <div className={styles.chartContainer}>
+                    <Line ref={chartRef} data={data} options={options} />
+                </div>
             </div>
             {selectedIndex != null && (
                 <SelectedIndex
