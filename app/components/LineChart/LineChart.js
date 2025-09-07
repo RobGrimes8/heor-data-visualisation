@@ -15,6 +15,9 @@ export default function LineChartFromJSON({ dataset }) {
 
     const labels = chartData.map((d) => d.date);
     const productivityScore = chartData.map((d) => {
+        if (d.hours_worked === 0) {
+            return 0;
+        }
         return Math.max(
             d.hours_worked * 10 + d.focus_level * 5 - d.break_minutes * 0.5,
             0

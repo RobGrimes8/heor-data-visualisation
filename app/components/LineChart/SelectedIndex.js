@@ -25,6 +25,16 @@ export default function SelectedIndex({
         setChartData(newData);
     };
 
+    const calculateProductivityScore = (dataPoint) => {
+        const { hours_worked, break_minutes, focus_level } = dataPoint;
+        if (hours_worked === 0) return 0;
+
+        return Math.max(
+            hours_worked * 10 + focus_level * 5 - break_minutes * 0.5,
+            0
+        );
+    };
+
     return (
         <div className={styles.selected_datapoint}>
             <div className={styles.info}>
@@ -32,7 +42,7 @@ export default function SelectedIndex({
                 <p>Date: {chartData[selectedIndex].date}</p>
                 <p>Productivity Score:</p>
                 <span className={styles.productivity_score}>
-                    {chartData[selectedIndex].productivity_score}
+                    {calculateProductivityScore(chartData[selectedIndex])}
                 </span>
             </div>
             <div className={styles.controls}>
