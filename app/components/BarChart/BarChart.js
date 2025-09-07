@@ -3,41 +3,38 @@
 import { useState } from "react";
 import styles from "./styles.module.scss";
 import { Bar } from "react-chartjs-2";
+import DateModal from "./DateModal";
 import "@/lib/chartSetup";
 
 export default function BarChart({ dataset }) {
     if (dataset.length === 0) return <p>Dataset not passed to component</p>;
 
-    const [startDate, setStartDate] = useState(dataset[0].date);
-    const [endDate, setEndDate] = useState(dataset[dataset.length - 1].date);
-    const [filteredData, setFilteredData] = useState(dataset);
-
-    const labels = filteredData.map((d) => d.date);
-    const hoursWorkedValues = filteredData.map((d) => d.hours_worked);
-    const breakValues = filteredData.map((d) => d.break_minutes / 60);
-    const focuLevelValues = filteredData.map((d) => d.focus_level);
+    const [filteredData, setFilteredData] = useState(dataset.slice(-7));
 
     const data = {
-        labels,
+        labels: filteredData.map((d) => d.date),
         datasets: [
             {
                 label: "Hours Worked",
-                data: hoursWorkedValues,
+                data: filteredData.map((d) => d.hours_worked),
                 borderWidth: 1,
+                borderRadius: 6,
                 borderColor: "rgba(99, 255, 161, 0.5)",
                 backgroundColor: "rgba(99, 255, 161, 0.2)",
             },
             {
                 label: "Break Time (hrs)",
-                data: breakValues,
+                data: filteredData.map((d) => d.break_minutes / 60),
                 borderWidth: 1,
+                borderRadius: 6,
                 borderColor: "rgba(255, 99, 132, 0.5)",
                 backgroundColor: "rgba(255, 99, 132, 0.2)",
             },
             {
                 label: "Focus Level",
-                data: focuLevelValues,
+                data: filteredData.map((d) => d.focus_level),
                 borderWidth: 1,
+                borderRadius: 6,
                 borderColor: "rgba(172, 99, 255, 0.5)",
                 backgroundColor: "rgba(172, 99, 255, 0.2)",
             },
@@ -46,57 +43,55 @@ export default function BarChart({ dataset }) {
 
     const options = {
         responsive: true,
+        maintainAspectRatio: false,
+        indexAxis: "y",
         plugins: {
-            legend: { position: "top" },
-            title: { display: true, text: "Monthly Productivity Overview" },
+            legend: {
+                position: "bottom",
+                labels: {
+                    usePointStyle: true,
+                    boxWidth: 30,
+                    font: { size: 12 },
+                },
+            },
+            title: {
+                display: true,
+                text: "Range View (Hours, Breaks, Focus)",
+                font: { size: 16, weight: "bold" },
+                padding: { top: 10, bottom: 20 },
+            },
+        },
+        scales: {
+            x: {
+                beginAtZero: true,
+                grid: { color: "rgba(0,0,0,0.05)" },
+            },
+            y: {
+                ticks: {
+                    font: { size: 12 },
+                    grid: { color: "rgba(0,0,0,0.02)" },
+                    callback: function (value, index) {
+                        const label = this.getLabelForValue(value);
+                        return new Date(label).toLocaleDateString("en-GB", {
+                            month: "short",
+                            day: "numeric",
+                        });
+                    },
+                },
+            },
         },
     };
 
-    const handleStartDateChange = (e) => {
-        setStartDate(e.target.value);
-        const newData = [...filteredData];
-        const newFiltered = newData.filter(
-            (d) => d.date >= e.target.value && d.date <= endDate
-        );
-        setFilteredData(newFiltered);
-    };
-    const handleEndDateChange = (e) => {
-        setEndDate(e.target.value);
-        const newData = [...filteredData];
-        const newFiltered = newData.filter(
-            (d) => d.date >= startDate && d.date <= e.target.value
+    const handleSelect = (startDateStr, endDateStr) => {
+        const newFiltered = dataset.filter(
+            (d) => d.date > startDateStr && d.date <= endDateStr
         );
         setFilteredData(newFiltered);
     };
 
     return (
         <div className={styles.chartContainer}>
-            <div className={styles.date_inputs}>
-                <div className={styles.date_input_container}>
-                    <label htmlFor="start_date">Start date:</label>
-                    <input
-                        type="date"
-                        name="start_date"
-                        id="start_date"
-                        value={startDate}
-                        onChange={handleStartDateChange}
-                        min={filteredData[0].date}
-                        max={endDate}
-                    />
-                </div>
-                <div className={styles.date_input_container}>
-                    <label htmlFor="end_date">End date:</label>
-                    <input
-                        type="date"
-                        name="end_date"
-                        id="end_date"
-                        value={endDate}
-                        onChange={handleEndDateChange}
-                        min={startDate}
-                        max={filteredData[filteredData.length - 1].date}
-                    />
-                </div>
-            </div>
+            <DateModal dataset={dataset} onDateChange={handleSelect} />
             <Bar data={data} options={options} />
         </div>
     );
