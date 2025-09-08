@@ -11,8 +11,8 @@ export default async function RangePage() {
                 <div className={styles.intro}>
                     <h1>Custom Range Explorer</h1>
                     <p>
-                        Select a start or end date to see how time is used over
-                        a period of 7 days.
+                        Select a start date to see how time is used over a
+                        period of 7 days.
                     </p>
                 </div>
                 <BarChart dataset={dataset} />
