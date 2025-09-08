@@ -15,6 +15,7 @@
 }
 .selected_datapoint {
     display: flex;
+    flex-direction: column;
     gap: 1rem;
     width: 100%;
     max-width: 1200px;
@@ -22,6 +23,10 @@
     padding: 1.5rem;
     border: 1px solid #e2e8f0;
     border-radius: 8px;
+    background-color: #fff;
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
     .info {
         padding: 1rem;
         background-color: #e8eeff;
@@ -29,9 +34,15 @@
         h3 {
             margin-bottom: 1rem;
             font-size: 1.2rem;
+            span {
+                font-size: 0.9rem;
+                color: #4a5565;
+            }
         }
         p {
+            margin-bottom: 0;
             font-size: 0.9rem;
+            font-weight: 600;
         }
         .productivity_score {
             font-size: 1.5rem;
@@ -41,9 +52,14 @@
     }
     .range_container {
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: flex-start;
         margin-bottom: 1rem;
+        @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+        }
         label {
             margin-bottom: 0.2rem;
             width: 100%;
@@ -56,14 +72,17 @@
             height: 8px;
             cursor: pointer;
             appearance: none;
-            background-color: oklch(92.8% 0.006 264.531);
+            background-color: #e5e7eb;
             border-radius: 16px;
         }
         span {
-            margin-left: 0.5rem;
+            margin-top: 0.5rem;
             padding: 0.2rem 0.5rem;
             background-color: #e8eeff;
             border-radius: 4px;
+            @media (min-width: 768px) {
+                margin-left: 0.5rem;
+            }
         }
     }
 }

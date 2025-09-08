@@ -15,7 +15,7 @@ export default function MonthPage() {
                         30 days.
                     </p>
                     <p className={styles.tip}>
-                        Click a data point to adjust it's values.
+                        Click a data point to adjust it&apos;s values.
                     </p>
                 </div>
                 <LineChart dataset={dataset} />

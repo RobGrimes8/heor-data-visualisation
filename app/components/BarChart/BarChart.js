@@ -7,8 +7,6 @@ import DateModal from "./DateModal";
 import "@/lib/chartSetup";
 
 export default function BarChart({ dataset }) {
-    if (dataset.length === 0) return <p>Dataset not passed to component</p>;
-
     const [filteredData, setFilteredData] = useState(dataset.slice(-7));
 
     const data = {
@@ -88,6 +86,8 @@ export default function BarChart({ dataset }) {
         );
         setFilteredData(newFiltered);
     };
+
+    if (dataset.length === 0) return <p>Dataset not passed to component</p>;
 
     return (
         <div className={styles.chartContainer}>
