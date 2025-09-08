@@ -1,6 +1,6 @@
 {
-    "name": "HEOR Productivity Tracker",
-    "short_name": "HEOR",
+    "name": "Productivity Tracker PWA",
+    "short_name": "PT PWA",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#f4f7f7",

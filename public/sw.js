@@ -1,4 +1,4 @@
-const CACHE_NAME = "heor-cache-v1";
+const CACHE_NAME = "ptpwa-cache-v1";
 const URLS_TO_CACHE = [
     "/",
     "/month",

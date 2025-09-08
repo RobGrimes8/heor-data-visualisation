@@ -38,7 +38,7 @@ export default function Footer() {
             </div>
 
             <div className={styles.rights}>
-                © 2025 HEOR. All rights reserved.
+                © 2025 Rob Grimes. All rights reserved.
             </div>
         </footer>
     );
