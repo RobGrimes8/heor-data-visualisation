@@ -66,7 +66,7 @@ export default function DateModal({ dataset, onDateChange }) {
     return (
         <div className={styles.dateModalContainer}>
             <button className={styles.open_btn} onClick={() => setIsOpen(true)}>
-                Change Date Range
+                Change Start Date
             </button>
 
             {isOpen && (
