@@ -26,7 +26,7 @@ The app works offline once installed and can be added to a user’s home screen 
 -   [Sass (SCSS Modules)](https://sass-lang.com/)
 -   [PWA setup with custom service worker](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 -   Deployed on [Vercel](https://vercel.com/)
--   LIVE DEMO - https://heor-data-visualisation.vercel.app/
+-   LIVE DEMO - https://heor-data-visualisation-sepia.vercel.app/
 
 ### Npm Libraries
 
