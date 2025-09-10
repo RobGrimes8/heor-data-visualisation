@@ -5,6 +5,7 @@ const URLS_TO_CACHE = [
     "/range",
     "/manifest.json",
     "/productivity_metrics.csv",
+    "/icons/icon_large-dark.svg",
 ];
 
 // Install SW & cache assets
