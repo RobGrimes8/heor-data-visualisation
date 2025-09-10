@@ -37,6 +37,13 @@ The app works offline once installed and can be added to a user’s home screen 
 
 ---
 
+## Key Design Desicions
+
+-   A clean simple colour pallette has been used to convey a professional look and reduce distractions away from from the important information.
+-   Simple tips are in place to help the user understand how they can view and adjust the data displayed in the graphs.
+
+---
+
 ## How to use
 
 ### 1. Clone this repository to your machine
