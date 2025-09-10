@@ -51,6 +51,10 @@ export default function SelectedIndex({
                 </p>
             </div>
             <div className={styles.controls}>
+                <p>
+                    Adjust the values below to see how they effect the
+                    productivity score.
+                </p>
                 <div className={styles.range_container}>
                     <label htmlFor="hours_worked">Hours Worked</label>
                     <input
