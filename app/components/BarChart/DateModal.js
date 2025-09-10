@@ -12,10 +12,11 @@ export default function DateModal({ dataset, onDateChange }) {
     const [isOpen, setIsOpen] = useState(false);
     const modalRef = useRef(null);
 
+    // Set default range as most recent 7 days
     const [range, setRange] = useState([
         {
-            startDate: new Date(dataset[0].date),
-            endDate: addDays(new Date(dataset[0].date), 6),
+            startDate: new Date(dataset[dataset.length - 7].date),
+            endDate: new Date(dataset[dataset.length - 1].date),
             key: "selection",
         },
     ]);
@@ -33,25 +34,30 @@ export default function DateModal({ dataset, onDateChange }) {
             document.removeEventListener("mousedown", handleClickOutside);
     }, [isOpen]);
 
+    const pad = (str) => {
+        return String(str).padStart(2, "0");
+    };
+
+    const convertDateToString = (date) => {
+        return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(
+            date.getDate()
+        )}`;
+    };
+
     const handleSelect = (ranges) => {
-        const { startDate, endDate } = ranges.selection;
+        const { startDate } = ranges.selection;
+        const endDate = addDays(startDate, 6);
 
-        // 🔹 enforce 7-day window
-        const days = differenceInDays(endDate, startDate);
-        if (days !== 6) {
-            setRange([
-                {
-                    startDate,
-                    endDate: addDays(startDate, 6),
-                    key: "selection",
-                },
-            ]);
-        } else {
-            setRange([ranges.selection]);
-        }
+        setRange([
+            {
+                startDate,
+                endDate: endDate,
+                key: "selection",
+            },
+        ]);
 
-        const startDateStr = startDate.toISOString().split("T")[0];
-        const endDateStr = addDays(startDateStr, 6).toISOString().split("T")[0];
+        const startDateStr = convertDateToString(startDate);
+        const endDateStr = convertDateToString(endDate);
 
         onDateChange(startDateStr, endDateStr);
         setIsOpen(false);
@@ -67,6 +73,10 @@ export default function DateModal({ dataset, onDateChange }) {
                 <div className={styles.modal}>
                     <div ref={modalRef} className={styles.modal_content}>
                         <h2>Select Date Range</h2>
+                        <p>
+                            Simply select the start date to see information
+                            displayed for a 7 day period.
+                        </p>
                         <DateRange
                             className={styles.date_input}
                             ranges={range}

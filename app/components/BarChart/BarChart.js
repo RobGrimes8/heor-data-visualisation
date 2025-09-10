@@ -9,6 +9,7 @@ import "@/lib/chartSetup";
 export default function BarChart({ dataset }) {
     const [filteredData, setFilteredData] = useState(dataset.slice(-7));
 
+    // react-chartjs-2 data and options
     const data = {
         labels: filteredData.map((d) => d.date),
         datasets: [
@@ -38,7 +39,6 @@ export default function BarChart({ dataset }) {
             },
         ],
     };
-
     const options = {
         responsive: true,
         maintainAspectRatio: false,
@@ -80,9 +80,10 @@ export default function BarChart({ dataset }) {
         },
     };
 
+    // Filter dataset with new start/end dates
     const handleSelect = (startDateStr, endDateStr) => {
         const newFiltered = dataset.filter(
-            (d) => d.date > startDateStr && d.date <= endDateStr
+            (d) => d.date >= startDateStr && d.date <= endDateStr
         );
         setFilteredData(newFiltered);
     };
