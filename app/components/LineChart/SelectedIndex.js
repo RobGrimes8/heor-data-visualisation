@@ -38,13 +38,11 @@ export default function SelectedIndex({
     return (
         <div className={styles.selected_datapoint}>
             <div className={styles.info}>
-                {/* <h3>Selected Data Point</h3> */}
                 <h3>
                     <span>Date:</span>
                     <br />
                     {chartData[selectedIndex].date}
                 </h3>
-                {/* <p>Date: {chartData[selectedIndex].date}</p> */}
                 <p>
                     Productivity Score: <br />
                     <span className={styles.productivity_score}>

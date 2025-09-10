@@ -14,6 +14,8 @@ export default function LineChartFromJSON({ dataset }) {
     if (dataset.length === 0) return <p>Dataset not passed to component</p>;
 
     const labels = chartData.map((d) => d.date);
+
+    // Calculate productivity score
     const productivityScore = chartData.map((d) => {
         if (d.hours_worked === 0) {
             return 0;
@@ -24,6 +26,7 @@ export default function LineChartFromJSON({ dataset }) {
         );
     });
 
+    // react-chartjs-2 data and options
     const data = {
         labels,
         datasets: [
@@ -39,7 +42,6 @@ export default function LineChartFromJSON({ dataset }) {
             },
         ],
     };
-
     const options = {
         responsive: true,
         plugins: {
