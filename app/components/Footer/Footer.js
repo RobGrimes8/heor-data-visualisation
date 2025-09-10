@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./Footer.module.scss";
 
 export default function Footer() {
@@ -34,6 +35,15 @@ export default function Footer() {
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div className={`${styles.section} ${styles.brand}`}>
+                    <Image
+                        src={"/icons/icon_large.svg"}
+                        width={150}
+                        height={150}
+                        alt="Productivity PWA Logo"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                    />
                 </div>
             </div>
 

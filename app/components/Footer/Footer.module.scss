@@ -39,6 +39,21 @@
                 }
             }
         }
+        .brand {
+            @media (min-width: 768px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            img {
+                width: 100px;
+                height: 100px;
+                @media (min-width: 768px) {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
     }
     .rights {
         padding: 0.5rem;
