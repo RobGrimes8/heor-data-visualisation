@@ -65,13 +65,21 @@ export default function DateModal({ dataset, onDateChange }) {
 
     return (
         <div className={styles.dateModalContainer}>
-            <button className={styles.open_btn} onClick={() => setIsOpen(true)}>
+            <button
+                id="change-date-btn"
+                className={styles.open_btn}
+                onClick={() => setIsOpen(true)}
+            >
                 Change Start Date
             </button>
 
             {isOpen && (
                 <div className={styles.modal}>
-                    <div ref={modalRef} className={styles.modal_content}>
+                    <div
+                        id="modal-content"
+                        ref={modalRef}
+                        className={styles.modal_content}
+                    >
                         <h2>Select Date Range</h2>
                         <p>
                             Simply select the start date to see information

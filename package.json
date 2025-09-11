@@ -1,27 +1,31 @@
 {
-  "name": "heor-data-visualisation",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "chart.js": "^4.5.0",
-    "date-fns": "^4.1.0",
-    "next": "15.5.2",
-    "react": "19.1.0",
-    "react-chartjs-2": "^5.3.0",
-    "react-date-range": "^2.0.1",
-    "react-dom": "19.1.0",
-    "react-icons": "^5.5.0",
-    "sass": "^1.92.0"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.2"
-  }
+    "name": "heor-data-visualisation",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build --turbopack",
+        "start": "next start",
+        "lint": "eslint",
+        "cypress:open": "cypress open",
+        "cypress:run": "cypress run"
+    },
+    "dependencies": {
+        "chart.js": "^4.5.0",
+        "date-fns": "^4.1.0",
+        "next": "15.5.2",
+        "react": "19.1.0",
+        "react-chartjs-2": "^5.3.0",
+        "react-date-range": "^2.0.1",
+        "react-dom": "19.1.0",
+        "react-icons": "^5.5.0",
+        "sass": "^1.92.0"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3",
+        "cypress": "^14.5.4",
+        "cypress-real-events": "^1.15.0",
+        "eslint": "^9",
+        "eslint-config-next": "15.5.2"
+    }
 }

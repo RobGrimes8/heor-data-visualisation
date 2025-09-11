@@ -1,0 +1,62 @@
+[
+    {
+        "hours_worked": 0,
+        "break_minutes": 0,
+        "focus_level": 1,
+        "expected_score": 0
+    },
+    {
+        "hours_worked": 1,
+        "break_minutes": 0,
+        "focus_level": 1,
+        "expected_score": 15.0
+    },
+    {
+        "hours_worked": 2,
+        "break_minutes": 30,
+        "focus_level": 5,
+        "expected_score": 30.0
+    },
+    {
+        "hours_worked": 5,
+        "break_minutes": 30,
+        "focus_level": 7,
+        "expected_score": 70
+    },
+    {
+        "hours_worked": 6,
+        "break_minutes": 60,
+        "focus_level": 4,
+        "expected_score": 50
+    },
+    {
+        "hours_worked": 12,
+        "break_minutes": 0,
+        "focus_level": 10,
+        "expected_score": 170.0
+    },
+    {
+        "hours_worked": 0,
+        "break_minutes": 120,
+        "focus_level": 10,
+        "expected_score": 0
+    },
+    {
+        "hours_worked": 3.5,
+        "break_minutes": 45,
+        "focus_level": 6,
+        "expected_score": 42.5
+    },
+    {
+        "hours_worked": 10,
+        "break_minutes": 15,
+        "focus_level": 9,
+        "expected_score": 137.5
+    },
+    {
+        "hours_worked": 7.5,
+        "break_minutes": 60,
+        "focus_level": 3,
+        "expected_score": 60
+    }
+]
