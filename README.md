@@ -92,7 +92,7 @@ npm run start
 -   If hours worked are 0, productivity score = 0.
 -   Real data for production would include data for every day e.g. weekends.
 
-## Assumptions
+## Testing
 
 Some basic testing has been added to cover:
 
